@@ -7,13 +7,11 @@
         <div class="row">
             <LInput
                 v-model="internals.smtp.host"
-                borderless
                 label="Host"
                 placeholder="smtp.example.com"
             />
             <LInput
                 v-model="internals.smtp.port"
-                borderless
                 label="Port"
                 placeholder="465"
             />
@@ -21,20 +19,17 @@
                 <label class="label">Use TLS</label>
                 <LCheckbox
                     v-model="internals.smtp.secure"
-                    borderless
                 />
             </div>
         </div>
         <div class="row">
             <LInput
                 v-model="internals.smtp.auth.user"
-                borderless
                 label="Username"
                 placeholder="username"
             />
             <LInput
                 v-model="internals.smtp.auth.password"
-                borderless
                 label="Password"
                 placeholder="********"
                 type="password"
@@ -43,7 +38,6 @@
         <h2>Sender</h2>
         <LInput
             v-model="internals.smtp.from"
-            borderless
             label="From"
             placeholder="My App <no-reply@example.com>"
         />
