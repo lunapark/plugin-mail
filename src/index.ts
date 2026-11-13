@@ -23,6 +23,7 @@ export default makePlugin({
     internals,
     name: "Mail",
     workspace: {
+        openOnClick: true,
         sections: [
             {
                 component: LMailSettings,
