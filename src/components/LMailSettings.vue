@@ -18,12 +18,12 @@
                 label="Username"
                 placeholder="username"
             />
-            <LInput
-                v-model="internals.smtp.auth.password"
+            <LSecretInput
                 class="half"
                 label="Password"
+                :name="secretNames.smtpPassword"
                 placeholder="********"
-                type="password"
+                :secrets="env.secrets"
             />
         </div>
         <LSettingRow
@@ -40,7 +40,10 @@
 
 <script setup lang="ts">
 import { LCard, LInput, LSettingRow, LSwitch } from "@luna-park/design";
+import { LSecretInput } from "@luna-park/plugin/components";
 
+import { secretNames } from "@/config.ts";
+import { env } from "@/env.ts";
 import { internals } from "@/internals.ts";
 </script>
 

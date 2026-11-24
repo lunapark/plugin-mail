@@ -4,6 +4,8 @@ import { makePlugin } from "@luna-park/plugin";
 import { backImports, getEnv, getInjections } from "@/build.ts";
 import LMailSettings from "@/components/LMailSettings.vue";
 import LSenderSettings from "@/components/LSenderSettings.vue";
+import { config } from "@/config.ts";
+import { mount } from "@/env.ts";
 import { internals } from "@/internals.ts";
 import icon from "@/logo.svg";
 import { sendNode } from "@/nodes/send.ts";
@@ -14,6 +16,7 @@ export default makePlugin({
         env: getEnv,
         injections: getInjections
     },
+    config,
     description: "Send emails from your backend.",
     editor: {
         nodes: [sendNode]
@@ -21,6 +24,9 @@ export default makePlugin({
     icon,
     id: "mail",
     internals,
+    lifecycle: {
+        mount
+    },
     name: "Mail",
     workspace: {
         openOnClick: true,

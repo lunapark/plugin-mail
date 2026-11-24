@@ -11,7 +11,7 @@ Plug in any SMTP server (Gmail, Mailgun, Postmark, Amazon SES, Brevo, your own�
 | 📤 **One node to send** | `Send Mail` takes a recipient, a subject, and a text and/or HTML body. |
 | 🔌 **Any SMTP provider** | Host, port, TLS and credentials, configured once in the settings. |
 | 🧪 **Safe preview** | In the editor, emails are logged to the console instead of sent, so you can test freely without spamming anyone. |
-| 🔒 **Secret kept out of the code** | Your SMTP password goes to the project's `.env`, never into the generated source. |
+| 🔒 **Secret kept out of the code** | Your SMTP password is saved in the project's `.env` and stays out of the generated source. |
 
 ## 🚀 Getting started
 
